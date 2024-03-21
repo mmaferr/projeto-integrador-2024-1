@@ -14,11 +14,6 @@ Lovelace - plataforma de cursos
 <!-- Substitua o seguinte parágrafo por um resumo do seu projeto: -->
 Lovelace é uma plataforma educacional que visa democratizar o acesso ao conhecimento em programação e desenvolvimento web. Oferecemos uma gama de cursos online. Nosso compromisso é proporcionar uma experiência de aprendizado dinâmica e envolvente, capacitando os alunos a adquirir habilidades essenciais para se destacar em um mercado de trabalho cada vez mais competitivo e em constante evolução. 
 
-## Documentação
-
-* [Documentação (para desenvolvedores)](DOCUMENTACAO.md)
-* [Manual (para usuários)](MANUAL.md)
-
 ## Sobre o autor
 
 <!-- Coloque seu nome, uma foto sua e uma pequena bio sobre você na seguinte tabela: -->
