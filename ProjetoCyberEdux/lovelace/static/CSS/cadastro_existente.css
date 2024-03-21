@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fira+Code:wght@300..700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #ffffff;
+    
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+
+}
+a {
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    margin-left: 50px;
+}
+.logo {
+    font-family: "Calistoga", serif;
+    font-size: 1.7rem;
+    background: linear-gradient(to left, #FDBB4E, #E165A7);
+    /* Propriedade específica do WebKit para cortar o plano de fundo para o texto */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.principal img {
+    width: 75%;
+}
+
+.principal a {
+    font-family: roboto;
+    font-weight: 300;
+    font-size: 20px;
+}

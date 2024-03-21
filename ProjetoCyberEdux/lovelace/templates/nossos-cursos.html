@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- <meta>: É uma tag HTML usada para fornecer metadados sobre o documento HTML. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/nossos-cursos.css' %}">
+    <script src="{% static 'js/aluno.js' %}"></script>
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="img/x-icon">
+
+    <title>Lovelace - Nossos Cursos</title>
+    
+
+    <!-- Essa é a descrição que aparece quando o usuário vizualiza o site pelo google -->
+    <meta name="description" content="Aprenda programação YumiCode, aqui nós apoiamos blabla e sabe o que lá">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}" class="logo">Lovelace</a>
+        </nav>      
+    </header>
+    <main>
+        <div class="principal">
+            <section class="cursos">
+                <div class="cursos-cabecalho-container">
+                    <div class="cursos-cabecalho">
+                        <h2 class="cursos-cabecalho-titulo">Nossos Cursos</h2>
+                        <p class="cursos-cabecalho-descricao">Escolha um dos cursos abaixo para começar a sua jornada...</p>
+                    </div>
+    
+                    <div class="cursos-img">
+                        <img src="{% static 'img/aluno-icon-lovelace.png' %}" class="lovelace-icon">                
+                    </div>
+                </div>    
+    
+                <div class="cursos-card-container">
+                    <div class="cursos-card-1">
+                        <!-- Quero que quando o usuário clicar em algum retangulo, ele seja direcionado para a tela de cadastro -->
+                        <a href="{% url 'aula' %}">
+                            <div class="curso-card-retangulo-horizontal">
+                                <div class="curso-card-topo">
+                                    <div class="curso-card-topo-icons">
+                                        <img src="{% static 'img/card-1.png' %}" class="icon-curso-card">
+                                    </div>
+                                </div>
+                                <div class="curso-card-cabecalho">
+                                    <h3 class="curso-card-titulo">Desenvolvedor Full-stack</h3>
+                                    <p class="curso-card-descricao">Domine programação front-end e back-end em um curso completo. Aprenda HTML, CSS, JavaScript, Python, Django e mais para criar aplicativos web profissionais.</p>
+                                </div>
+                            </div>
+                        </a>
+    
+                        <a href="{% url 'aula' %}">
+                            <div class="curso-card-retangulo-horizontal">
+                                <div class="curso-card-topo">
+                                    <div class="curso-card-topo-icons">
+                                        <img src="{% static 'img/card-2.png' %}" class="icon-curso-card-2">
+                                    </div>
+                                </div>
+                                <div class="curso-card-cabecalho">
+                                    <h3 class="curso-card-titulo">Desenvolvedor Front-end</h3>
+                                    <p class="curso-card-descricao">Aprenda as habilidades essenciais para se tornar um desenvolvedor front-end. Explore HTML, CSS e JavaScript para criar interfaces web interativas e responsivas.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="{% url 'aula' %}">
+                            <div class="curso-card-retangulo-horizontal">
+                                <div class="curso-card-topo">
+                                    <div class="curso-card-topo-icons">
+                                        <img src="{% static 'img/python.png' %}" class="icon-curso-card-menor">
+                                    </div>
+                                </div>
+                                <div class="curso-card-cabecalho">
+                                    <h3 class="curso-card-titulo">Python</h3>
+                                    <p class="curso-card-descricao">Aprenda Python para desenvolvimento web, análise de dados e automação. Python é uma linguagem de programação versátil e poderosa, amplamente utilizada em diversas áreas da computação.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="cursos-card-2">
+                        <a href="{% url 'aula' %}">
+                            <div class="curso-card-retangulo-horizontal">
+                                <div class="curso-card-topo">
+                                    <div class="curso-card-topo-icons">
+                                        <img src="{% static 'img/sql.png' %}" class="icon-curso-card-menor">
+                                    </div>
+                                </div>
+                                <div class="curso-card-cabecalho">
+                                    <h3 class="curso-card-titulo">SQL</h3>
+                                    <p class="curso-card-descricao">Domine SQL para manipular bancos de dados de forma eficiente. SQL é a linguagem padrão para gerenciamento de bancos de dados relacionais, permitindo realizar consultas, atualizações e modificações nos dados.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="{% url 'aula' %}">
+                            <div class="curso-card-retangulo-horizontal">
+                                <div class="curso-card-topo">
+                                    <div class="curso-card-topo-icons">
+                                        <img src="{% static 'img/html.png' %}" class="icon-curso-card-menor">
+                                    </div>
+                                </div>
+                                <div class="curso-card-cabecalho">
+                                    <h3 class="curso-card-titulo">HTML</h3>
+                                    <p class="curso-card-descricao">Aprenda HTML para criar páginas web. HTML é a linguagem de marcação fundamental para a construção de páginas na internet, permitindo estruturar o conteúdo e definir sua aparência.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="{% url 'aula' %}">
+                            <div class="curso-card-retangulo-horizontal">
+                                <div class="curso-card-topo">
+                                    <div class="curso-card-topo-icons">
+                                        <img src="{% static 'img/js.png' %}" class="icon-curso-card-menor">
+                                    </div>
+                                </div>
+                                <div class="curso-card-cabecalho">
+                                    <h3 class="curso-card-titulo">Javascript</h3>
+                                    <p class="curso-card-descricao">Explore JavaScript para tornar suas páginas web interativas. JavaScript é uma linguagem de programação de alto nível, amplamente utilizada para adicionar comportamento dinâmico às páginas web, como validação de formulários, animações e interações do usuário.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    {% include 'side-nav.html' %}
+</body>

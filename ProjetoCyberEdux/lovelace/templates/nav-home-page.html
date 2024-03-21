@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- <meta>: É uma tag HTML usada para fornecer metadados sobre o documento HTML. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/nav-home.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="img/x-icon">
+    <script src="{% static 'js/homepage.js' %}"></script>
+    <title>Aprenda Programação com Lovelace</title>
+    
+
+    <!-- Essa é a descrição que aparece quando o usuário vizualiza o site pelo google -->
+    <meta name="description" content="Aprenda programação YumiCode, aqui nós apoiamos blabla e sabe o que lá">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <span class="span-logo">Lovelace</span>
+            </div>
+            <div class="nav-list">
+                <ul class="menu">
+                    <li class="nav-item"><a href="#" class="nav-link  menu-login">Sobre</a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="login-button">
+                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+                <button><a href="{% url 'cadastrar' %}">Cadastrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="{% static 'img/nav-home-page/menu_white_36dp.svg' %}" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Cadastrar</a></button>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

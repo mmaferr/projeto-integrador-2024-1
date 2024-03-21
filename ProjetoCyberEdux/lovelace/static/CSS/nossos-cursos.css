@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fira+Code:wght@300..700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1B1B1B;
+    color: #ffffff;
+    
+}
+
+html {
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.logo {
+    font-family: "Calistoga", serif;
+    font-size: 1.7rem;
+    background: linear-gradient(to left, #FDBB4E, #E165A7);
+    /* Propriedade específica do WebKit para cortar o plano de fundo para o texto */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cursos {
+    display: flex;
+    margin-top: 70px;
+    margin-left: 70px;
+    flex-direction: column;
+
+    position: relative; /* Adicionando position relative */
+    animation: slide-up 2s ease-out; /* Definindo a animação */
+}
+.cursos-cabecalho-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 170px;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(2px); /* Começa abaixo da tela */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Termina na posição normal */
+    }
+}
+
+.cursos-cabecalho {
+    display: flex;
+    flex-direction: column;
+}
+
+.cursos-cabecalho-titulo {
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    font-size: 45px;
+    font-style: normal;
+}
+
+.cursos-cabecalho-descricao {
+    font-family: roboto;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.lovelace-icon {
+    width: 70%;
+}
+
+.curso-card-topo {
+    margin-bottom: 30px;
+    
+}
+
+.icon-curso-card-2 {
+    width: 32%;
+}
+
+.icon-curso-card {
+    width: 40%;
+}
+
+.icon-curso-card-menor {
+    width: 7%;
+}
+
+.cursos-card-1, .cursos-card-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.curso-card-retangulo-horizontal {
+    background: none;
+    border-style: solid;
+    border-color: #545454;
+    border-width: 1px;
+    width: 350px;
+    height: 300px;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.curso-card-retangulo-horizontal:hover {
+    background-color: #333; /* Cor desejada quando o mouse passa sobre o card */
+  }
+  
+  .card-curso-retangulo-vertical:hover {
+    background-color: #333; /* Cor desejada quando o mouse passa sobre o card */
+  }
+
+.curso-card-titulo {
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.curso-card-descricao {
+    font-family: roboto;
+    font-weight: 300;
+    font-size: 17px;
+}

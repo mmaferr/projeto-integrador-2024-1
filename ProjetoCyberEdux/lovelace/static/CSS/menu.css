@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fira+Code:wght@300..700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Estilo do menu de aulas */
+.container{
+    display: flex;
+    flex-direction: row;
+    
+}
+.menu {
+    width: 300px;
+    max-height: 100vh; /* Altura máxima do menu */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    border: solid;
+    border-style: solid;
+    border-color: #545454;
+    border-width: 1px;
+}
+
+.unidade {
+    background: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.unidade:hover{
+    background-color: #333 ;
+    border-style: solid;
+    border-color: #545454;
+    border-width: 1px;
+}
+
+.unidade-header {
+    cursor: pointer;
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.unidade-header:hover {
+    background-color: #ced4da;
+}
+
+.conteudo {
+    display: none;
+    padding: 15px;
+}
+
+.titulo-conteudo {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.titulo-conteudo:hover {
+    color: #007bff;
+}
+
+/* Estilo do conteúdo lateral */
+.conteudo-lateral {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    width: 870px;
+    background: none;
+    border-left: 1px solid #dee2e6;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 50px;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+    height: 100vh;
+}
+
+.conteudo-lateral h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.conteudo-lateral p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.conteudo-lateral img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+}

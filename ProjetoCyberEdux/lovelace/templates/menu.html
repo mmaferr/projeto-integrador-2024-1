@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Aulas</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="img/x-icon">
+    <script src="{% static 'js/menu.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="unidade" onclick="toggleContent('1')">Unidade 1</div>
+            <div class="unidade" onclick="toggleContent('2')">Unidade 2</div>
+            <div class="unidade" onclick="toggleContent('3')">Unidade 3</div>
+            <div class="unidade" onclick="toggleContent('4')">Unidade 4</div>
+            <div class="unidade" onclick="toggleContent('5')">Unidade 5</div>
+            <div class="unidade" onclick="toggleContent('6')">Unidade 6</div>
+            <div class="unidade" onclick="toggleContent('1')">Unidade 7</div>
+            <div class="unidade" onclick="toggleContent('2')">Unidade 8</div>
+            <div class="unidade" onclick="toggleContent('3')">Unidade 9</div>
+            <div class="unidade" onclick="toggleContent('4')">Unidade 10</div>
+            <div class="unidade" onclick="toggleContent('5')">Unidade 11</div>
+            <div class="unidade" onclick="toggleContent('6')">Unidade 12</div>
+            <div class="unidade" onclick="toggleContent('4')">Unidade 13</div>
+            <div class="unidade" onclick="toggleContent('5')">Unidade 14</div>
+            <div class="unidade" onclick="toggleContent('6')">Unidade 15</div>
+        
+        <!-- Adicione mais unidades conforme necessário -->
+        </div>
+
+        <div class="conteudo-lateral" id="conteudo-lateral">
+            <h1 id="titulo-conteudo"></h1>
+            <p id="texto-conteudo"></p>
+            <img id="imagem-conteudo" src="" alt="">
+        </div>
+    </div>
+    
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include 'side-nav.html' %}
+</body>
+</html>

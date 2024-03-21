@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/side-nav.css' %}">
+    
+    <title>Lovelace - Portal do Aluno</title>
+</head>
+<body>
+    <div class="header">
+        <div class="side-nav">
+            <div class="user">
+                <img src="{% static 'img/user.jpeg' %}" class="user-img">
+                <div>
+                    <h2>{{ user.first_name }}</h2>
+                    <p>{{ user.email }}</p>
+                    <p>{{ user.data_nascimento }}</p>
+                </div>
+                <img src="{% static 'img/star.png' %}" class="star-img">
+                
+            </div>
+            <ul>
+                <li><img src="{% static 'img/home-icon.png' %}"><a href="{% url 'portal-do-aluno' %}">Início</a></li>
+                <li><img src="{% static 'img/book-icon.png' %}"><a href="{% url 'nossos-cursos' %}">Cursos</a></li>
+                <li><img src="{% static 'img/chat-icon.png' %}"><a>Messages</a></li>
+                <li><img src="{% static 'img/settings-icon.png' %}"><a>Settings</a></li>
+            </ul>
+
+            <ul>
+                <li><img src="{% static 'img/logout-icon.png' %}"><a>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

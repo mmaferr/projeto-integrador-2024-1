@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- <meta>: É uma tag HTML usada para fornecer metadados sobre o documento HTML. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="img/x-icon">
+    <script src="{% static 'js/homepage.js' %}"></script>
+    <title>Aprenda Programação com Lovelace</title>
+    
+
+    <!-- Essa é a descrição que aparece quando o usuário vizualiza o site pelo google -->
+    <meta name="description" content="Aprenda programação YumiCode, aqui nós apoiamos blabla e sabe o que lá">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <span class="span-logo">Lovelace</span>
+            </div>
+            <div class="nav-list">
+                <ul class="menu">
+                    <li class="nav-item"><a href="{% url 'sobre' %}" class="nav-link  menu-login">Sobre</a></li>
+                    <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="{% url 'cadastrar' %}">Cadastrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="{% static 'img/nav-home-page/menu_white_36dp.svg' %}" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="{% url 'sobre' %}" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Cadastrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="principal">
+            <section class="hero">
+                
+                <header class="hero-conteudo">
+                    <div class="hero-cabecalho">
+                        <h1 class="hero-titulo">Estude na melhor<br>plataforma de programação</h1>
+                        <p class="hero-p">Desvende o potencial da programação com Lovelace. Comece sua jornada hoje!</p>
+                    </div> 
+                    <div class="hero-button">
+                        <a href="{% url 'cadastrar' %}"><button class="button-cadastre-se">Cadastre-se e aprenda gratuitamente</button></a>
+
+                        <div class="button-saiba-mais-container">
+                            <button type="button" class="scroll-button" id="retangulo-pontos-fortes" onclick="scrollToSection('retangulo-pontos-fortes')">Saiba mais
+                                <img src="{% static 'img/seta-saiba-mais.png' %}" class="seta-saiba-mais" alt="Seta do botão saiba mais">                                          
+                            </button>
+                        </div>
+                    </div>                                              
+                </header>
+                <div class="hero-imagem-container">
+                    <img src="{% static 'img/lovelace.png' %}" class="hero-image" alt="Imagem de destaque">                
+                </div> 
+            </section>           
+        </div>
+
+        <section class="avaliacoes">
+            <header class="avaliacoes-cabecalho">
+                <h2>Comece a estudar e tenha uma carreira de sucesso</h2>
+            </header>
+            <div class="avaliacoes-card-container">
+                <div class="avaliacoes-card">
+                    <header class="avaliacoes-card-autor">
+                        <div class="avaliacoes-card-autor-detalhes">
+                            <h3 class="avaliacao-nome">Taylor Swift</h3>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_b_PE6jze89A2G33k6knORITj6zPe3PjWlvnoX8qcDDTQ5bTU6F8_RgZK2gBBm0_YFCE&usqp=CAU" alt="">
+                        </div>                      
+                    </header>
+                    <p class="avaliacao-descricao">Lovelace proporciona uma experiência acadêmica imersiva e interativa, onde cada aluno pode trilhar seu próprio caminho de aprendizado de forma flexível e personalizada.</p>
+                    <div class="avaliacao-profissao">
+                        <span class="avaliacao-autor-profissao">Front-end Developer</span>
+                    </div>
+                </div>
+
+                <div class="avaliacoes-card">
+                    <header class="avaliacoes-card-autor">
+                        <div class="avaliacoes-card-autor-detalhes">
+                            <h3 class="avaliacao-nome">Gustavo Mioto</h3>
+                            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        </div>                      
+                    </header>
+                    <p class="avaliacao-descricao">Com uma interface intuitiva e recursos inovadores, Lovelace eleva o ensino de programação a outro nível, oferecendo uma jornada educacional envolvente e estimulante para os alunos.</p>
+                    <div class="avaliacao-profissao">
+                        <span class="avaliacao-autor-profissao">Full-stack Developer</span>
+                    </div>
+                </div>
+
+                <div class="avaliacoes-card">
+                    <header class="avaliacoes-card-autor">
+                        <div class="avaliacoes-card-autor-detalhes">
+                            <h3 class="avaliacao-nome">Princípe Charles</h3>
+                            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        </div>                      
+                    </header>
+                    <p class="avaliacao-descricao">Lovelace além de ensinar programação, também inspira e capacita seus alunos a explorar seu potencial máximo, fornecendo uma plataforma abrangente com de última geração.</p>
+                    <div class="avaliacao-profissao">
+                        <span class="avaliacao-autor-profissao">Back-end Developer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cursos">
+            <div class="cursos-cabecalho-container">
+                <div class="cursos-cabecalho">
+                    <h2 class="cursos-cabecalho-titulo">Python, Javascript, HTML, CSS e muito mais</h2>
+                    <p class="cursos-cabecalho-descricao">Acesse quantos cursos quiser gratuitamente</p>
+                </div>
+            </div>    
+
+            <div class="cursos-card-container">
+                    <!-- Quero que quando o usuário clicar em algum retangulo, ele seja direcionado para a tela de cadastro -->
+                    <a href="{% url 'cadastrar' %}">
+                        <div class="curso-card-retangulo-horizontal">
+                            <div class="curso-card-topo">
+                                <div class="curso-card-topo-icons">
+                                    <img src="{% static 'img/card-1.png' %}" class="icon-curso-card">
+                                    <span class="curso-span">curso</span>
+                                </div>
+                            </div>
+                            <div class="curso-card-cabecalho">
+                                <h3 class="curso-card-titulo">Desenvolvedor Full-stack</h3>
+                                <p class="curso-card-descricao">Domine todas as camadas do desenvolvimento web. Seja o arquiteto de sistemas completos com habilidades tanto no front end quanto no back end.</p>
+                                <div class="curso-card-coninue-lendo">
+                                    <img src="{% static 'img/seta-curso-card.png' %}" class="seta-curso-card">
+                                </div>
+                            </div>                        
+                        </div>
+                    </a>
+
+                    <a href="{% url 'cadastrar' %}">
+                        <div class="curso-card-retangulo-horizontal">
+                            <div class="curso-card-topo">
+                                <div class="curso-card-topo-icons">
+                                    <img src="{% static 'img/card-2.png' %}" class="icon-curso-card">
+                                    <span class="curso-span">curso</span>
+                                </div>
+                            </div>
+                            <div class="curso-card-cabecalho">
+                                <h3 class="curso-card-titulo">Desenvolvedor Front-end</h3>
+                                <p class="curso-card-descricao">Dê vida à interface do usuário. Crie experiências envolventes e interativas para os usuários, combinando criatividade com sólidas habilidades de codificação.</p>
+                                <div class="curso-card-coninue-lendo">
+                                    <img src="{% static 'img/seta-curso-card.png' %}" class="seta-curso-card">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                
+                
+                    <a href="{% url 'cadastrar' %}">
+                        <div class="curso-card-retangulo-horizontal">
+                            <div class="curso-card-topo">
+                                <div class="curso-card-topo-icons">
+                                    <img src="{% static 'img/python.png' %}" class="icon-curso-card">
+                                    <span class="curso-span">curso</span>
+                                </div>
+                            </div>
+                            <div class="curso-card-cabecalho">
+                                <h3 class="curso-card-titulo">Python</h3>
+                                <p class="curso-card-descricao">A linguagem de programação versátil. Com Python, desenvolva desde aplicações web dinâmicas até análises de dados complexas, de forma eficiente e elegante.</p>
+                                <div class="curso-card-coninue-lendo">
+                                    <img src="{% static 'img/seta-curso-card.png' %}" class="seta-curso-card">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="{% url 'cadastrar' %}">
+                        <div class="curso-card-retangulo-horizontal">
+                            <div class="curso-card-topo">
+                                <div class="curso-card-topo-icons">
+                                    <img src="{% static 'img/sql.png' %}" class="icon-curso-card">
+                                    <span class="curso-span">curso</span>
+                                </div>
+                            </div>
+                            <div class="curso-card-cabecalho">
+                                <h3 class="curso-card-titulo">SQL</h3>
+                                <p class="curso-card-descricao">O idioma dos bancos de dados. Com SQL, gerencie e manipule dados de maneira eficaz, realizando consultas e operações complexas em seus bancos de dados.</p>
+                                <div class="curso-card-coninue-lendo">
+                                    <img src="{% static 'img/seta-curso-card.png' %}" class="seta-curso-card">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="{% url 'cadastrar' %}">
+                        <div class="curso-card-retangulo-horizontal">
+                            <div class="curso-card-topo">
+                                <div class="curso-card-topo-icons">
+                                    <img src="{% static 'img/html.png' %}" class="icon-curso-card">
+                                    <span class="curso-span">curso</span>
+                                </div>
+                            </div>
+                            <div class="curso-card-cabecalho">
+                                <h3 class="curso-card-titulo">HTML</h3>
+                                <p class="curso-card-descricao">A espinha dorsal da web. Com HTML, estruture e organize o conteúdo de suas páginas da web, criando uma base sólida para a experiência do usuário.</p>
+                                <div class="curso-card-coninue-lendo">
+                                    <img src="{% static 'img/seta-curso-card.png' %}" class="seta-curso-card">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="{% url 'cadastrar' %}">
+                        <div class="curso-card-retangulo-horizontal">
+                            <div class="curso-card-topo">
+                                <div class="curso-card-topo-icons">
+                                    <img src="{% static 'img/js.png' %}" class="icon-curso-card">
+                                    <span class="curso-span">curso</span>
+                                </div>
+                            </div>
+                            <div class="curso-card-cabecalho">
+                                <h3 class="curso-card-titulo">Javascript</h3>
+                                <p class="curso-card-descricao">A linguagem da interatividade. Com JavaScript, dê vida às suas páginas da web, adicionando comportamentos dinâmicos e reativos para uma experiência do usuário mais cativante.</p>
+                                <div class="curso-card-coninue-lendo">
+                                    <img src="{% static 'img/seta-curso-card.png' %}" class="seta-curso-card">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="img/x-icon">
+    <link rel="stylesheet" href="{% static 'css/cadastrar.css' %}">
+    <title>Cadastrar no Lovelace</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}" class="logo">Lovelace</a>
+        </nav>      
+    </header>
+    <div class="principal">
+        <div class="blur1">
+            <img src="{% static 'img/blur-left.png' %}" alt="">
+        </div>
+        <div class="hero">
+            <h2>Comece hoje a estudar programação!</h2>
+            <form class="hero-cadastro" method="POST">
+                {% csrf_token %}
+                <div class="hero-input">
+                    <input type="first_name" placeholder="Seu nome" name="nome">
+                    <input type="email" placeholder="Seu email" name="email">
+                    <input type="password" placeholder="Sua senha" name="senha">
+                    <input type="date" placeholder="Data de Nascimento" name="data_nascimento">
+                </div>
+                <button class="hero-button">Cadastrar</button>
+                <p>Já tem uma conta? <a href="{% url 'login' %}"> Entrar na conta</a></p>
+            </form>
+        </div>
+        <div class="blur-2">
+            <img src="{% static 'img/blur-lovelace-right.png' %}" alt="">
+        </div>    
+    </div>
+     
+      
+</body>
+</html>

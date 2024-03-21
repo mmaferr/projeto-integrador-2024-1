@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/portal-do-aluno-meus-cursos.css' %}">
+    <title>Lovelace - Portal do Aluno</title>
+</head>
+<body> 
+    <header>
+        <nav>
+            <span class="logo">Lovelace</span>
+            <ul class="menu">
+                <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'cursos' %}">Nossos Cursos</a></li>
+            </ul> 
+        </nav>  
+    </header>
+
+        <div class="principal">
+            <section class="cursos">
+                <div class="cursos-cabecalho-container">
+                    <div class="cursos-cabecalho">
+                        <h2 class="cursos-cabecalho-titulo">Meus Cursos</h2>
+                        <p class="cursos-cabecalho-descricao">Aqui estão os seus cursos...</p>
+                    </div>
+    
+                    <div class="cursos-img">
+                        <img src="{% static 'img/mini-lovelace.png' %}" class="lovelace-icon">                
+                    </div>
+                </div>    
+    
+                <div class="cursos-card-container">
+                    <div class="cursos-card-1">
+                        <!-- Quero que quando o usuário clicar em algum retangulo, ele seja direcionado para a tela de cadastro -->
+                        <a href="{% url 'cadastrar' %}">
+                            <div class="curso-card-retangulo-horizontal">
+                                <div class="curso-card-topo">
+                                    <div class="curso-card-topo-icons">
+                                        <img src="{% static 'img/card-1.png' %}" class="icon-curso-card">
+                                    </div>
+                                </div>
+                                <div class="curso-card-cabecalho">
+                                    <h3 class="curso-card-titulo">Desenvolvedor Full-stack</h3>
+                                    <p class="curso-card-descricao">Pão é um alimento obtido pelo cozimento de uma massa alimentar de consistência elástica, elaborada basicamente</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    {% include 'side-nav.html' %}
+</body>
+</html>

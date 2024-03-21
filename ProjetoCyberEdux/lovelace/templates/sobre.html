@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- <meta>: É uma tag HTML usada para fornecer metadados sobre o documento HTML. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="img/x-icon">
+    <script src="{% static 'js/homepage.js' %}"></script>
+    <title>Sobre Nós</title>
+    
+
+    <!-- Essa é a descrição que aparece quando o usuário vizualiza o site pelo google -->
+    <meta name="description" content="Aprenda programação YumiCode, aqui nós apoiamos blabla e sabe o que lá">
+</head>
+<body>
+    <header>
+        <nav>
+           <a href="{% url 'home' %}"><span class="logo">Lovelace</span></a>
+            <ul class="menu">
+                <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'linguagens' %}">Linguagens</a></li>
+            </ul>
+            <ul class="menu menu-login">
+                <li><a class="login" href="{% url 'login' %}">Login</a></li>
+                <a href="{% url 'cadastrar' %}"><button class="menu-button">Cadastre-se</button></a>
+            </ul>
+            
+        </nav>  
+    </header>
+    <main>
+        <div class="principal">
+            <section class="hero">
+                <div class="hero-cabecalho">
+                    <h1 class="hero-titulo">Sobre Nós</h1>
+                    <p class="hero-p">Bem-vindo ao Lovelace, seu destino definitivo para aprimorar suas habilidades de programação e mergulhar no emocionante mundo da tecnologia. Fundado com a missão de capacitar indivíduos de todas as origens a se tornarem mestres na arte da programação, o Lovelace oferece uma plataforma inovadora que combina instrução especializada, projetos práticos e uma comunidade vibrante de aprendizes.
+                        <br>
+                        <br>
+                        Nosso nome homenageia Ada Lovelace, uma pioneira da ciência da computação cujo legado continua a inspirar e motivar milhões em todo o mundo. Da mesma forma, buscamos promover uma cultura de excelência e inovação, capacitando nossos alunos a alcançarem seus objetivos profissionais e a construírem um futuro promissor na indústria de tecnologia.
+                        <br>
+                        <br>
+                        No Lovelace, acreditamos na acessibilidade e na inclusão. Nossa ampla gama de cursos abrange desde os fundamentos da programação até tópicos avançados em desenvolvimento de software, ciência de dados, inteligência artificial e muito mais. Com instrutores experientes e currículos cuidadosamente elaborados, oferecemos uma experiência de aprendizado única que se adapta às necessidades individuais de cada aluno.
+                        <br>
+                        <br>
+                        Além disso, nossa plataforma interativa proporciona uma experiência de aprendizado envolvente, repleta de desafios práticos, projetos colaborativos e oportunidades de networking. Nosso compromisso com a excelência acadêmica e a inovação tecnológica nos torna líderes no setor de educação em programação.</p>
+                </div> 
+                <div class="hero-imagem-container">
+                    <img src="{% static 'img/equipe-lovelace.jpg' %}" class="hero-img" alt="Imagem de destaque">
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
