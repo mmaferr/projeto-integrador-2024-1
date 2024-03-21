@@ -24,4 +24,4 @@ Lovelace é uma plataforma educacional que visa democratizar o acesso ao conheci
 <!-- Coloque seu nome, uma foto sua e uma pequena bio sobre você na seguinte tabela: -->
 |  |  |
 |:-------------:|:------------------------------------------------------------:|
-|  <img src="img/profilepic.png" width="150px"></br> **Maria Fernanda Morais Castro** | Estudante de Ciência da Computação |
+|  <img src="img/profile.jpeg" width="150px"></br> **Maria Fernanda Morais Castro** | Estudante de Ciência da Computação |
